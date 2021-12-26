@@ -4,8 +4,8 @@ const puppeteer = require('puppeteer');
 const app = express();
 
 app.use("/scrape-data", (req, res, next) => {
-    const {url} = req.body;
-    //const url = "https://www.amazon.com/Redragon-Keyboard-Mechanical-Software-Supported/dp/B09BVCVTBC/ref=sr_1_9?crid=EV27YXVOV0J7&keywords=redragon&qid=1640561891&sprefix=redragon%2Caps%2C376&sr=8-9"
+    //const {url} = req.body;
+    const url = "https://www.amazon.com/Redragon-Keyboard-Mechanical-Software-Supported/dp/B09BVCVTBC/ref=sr_1_9?crid=EV27YXVOV0J7&keywords=redragon&qid=1640561891&sprefix=redragon%2Caps%2C376&sr=8-9"
     const scrapeData = async (url) => {
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
